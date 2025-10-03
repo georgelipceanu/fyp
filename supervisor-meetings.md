@@ -39,11 +39,18 @@ Agenda:
 		- Investigating other tools that could potentially be used to substitute the need for  
 	- What needs to be done?: 
 		- Finalise APIs being used (which is difficult since there I am waiting for responses from ElectricityMaps and Watttime).
+
 Notes: 
-- [Placeholder]
+- What information does AWS provide regarding energy/carbon data?
+- Focus on single EKS cluster for prototype, expand to multi-region deployments if possible to get APIs and if possible in scope.
+- How does the scheduler work?
+- How will jobs be given a value for it to be based on? 
 
 Actionable Items:
-- [Placeholder] 
+- Write up how scheduler works in Kubernetes, how it works and how it will be changed.
+- Research additional inputs for scheduler.
+- Read paper provided on Slack.
+- Get template and plan out this semester.
 
 25/09/2025
 
