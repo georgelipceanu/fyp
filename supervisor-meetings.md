@@ -1,4 +1,34 @@
-01/10/2025
+# 09/10/2025
+
+Agenda:
+- Previous Action Items -
+	- Scheduler Write-up - On Overleaf, very rough and won't be used in project but I feel that I understand the scheduler and how I want to go about it.
+ 	- Semester Plan - Starting from this week onwards:
+		- Week 1-2: CRDs, Controller logic and Scheduler
+  		- Week 3-4: Observability - Grafana, Prometheus and Kepler
+    	- Week 5: CLI tooling
+     	- Week 6+: Multi-Cluster Deployments
+    - Template:
+		- Introduction - Background + Motivation
+    	- Review of Related Work
+     	- System Architecture and Design
+        - Scheduler Design and Implementation
+        - Implementation of Supporting Components
+        - Multi-Cluster Deployments
+        - Testing and Evaluation
+  	- Document to read:
+  		- Google's large-scale operational framework that reduces the carbon footprint of data center computing by shifting workloads to times when local electricity grids are cleaner.
+  		- 1–2% average reduction in carbon-related power use, and up to 8% reduction in some clusters with high renewable variability.
+  	 	- Value in this field
+Notes: 
+
+Actionable Items:
+- Write up how scheduler works in Kubernetes, how it works and how it will be changed.
+- Research additional inputs for scheduler.
+- Read paper provided on Slack.
+- Get template and plan out this semester.
+
+# 01/10/2025
 
 Agenda:
 - Previous articles for review -
@@ -52,7 +82,7 @@ Actionable Items:
 - Read paper provided on Slack.
 - Get template and plan out this semester.
 
-25/09/2025
+# 25/09/2025
 
 Agenda:
 - PROJECT GOALS -
