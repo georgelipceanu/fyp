@@ -20,13 +20,15 @@ Agenda:
   		- Google's large-scale operational framework that reduces the carbon footprint of data center computing by shifting workloads to times when local electricity grids are cleaner.
   		- 1–2% average reduction in carbon-related power use, and up to 8% reduction in some clusters with high renewable variability.
   	 	- Value in this field
+
 Notes: 
+- CPU measured in cores, how would it compare, expand on energy
+- OpenShift compatibility/addons
 
 Actionable Items:
-- Write up how scheduler works in Kubernetes, how it works and how it will be changed.
-- Research additional inputs for scheduler.
-- Read paper provided on Slack.
-- Get template and plan out this semester.
+- Expand on energy formula, explore alternatives.
+- Begin work on actual document
+- Begin prototyping
 
 # 01/10/2025
 
