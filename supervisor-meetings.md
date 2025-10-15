@@ -1,3 +1,26 @@
+# 15/10/2025
+
+Agenda:
+- Previous Action Items -
+	- Energy formula expansion:
+ 		- Derived from linear power model in article provided on Slack
+   		- Could try other dynamic power functions outside of prototype if needed
+		- Update to scheduler doc and actual doc
+ 	- Prototype:
+  		- Working CRDs with Kubebuilder
+    	- Scheduler WIP (hope to have a barebones working version by the end of the week)
+     	- Attempting locally right now, will migrate to EKS once a baseline is established
+  	- Document:
+  		- Base format laid out (sections may be added in the future) 
+  		- Introduction and Scheduler sections 
+- Electricity Maps Response -
+	- Told the sign up with academic email (which hasn't worked), waiting for response back
+
+Notes:
+
+Action Items:
+
+
 # 09/10/2025
 
 Agenda:
