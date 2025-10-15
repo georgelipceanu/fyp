@@ -17,9 +17,13 @@ Agenda:
 	- Told the sign up with academic email (which hasn't worked), waiting for response back
 
 Notes:
+- Node definition unclear, will there be 1:1 relation between node and all cores or cores allocated to nodes, etc.
+- Best practice for invoking custom code (scheduler, CRD).
+- Document is most important.
 
 Action Items:
-
+- Cover from introduction to Scheduler design in document.
+- Keep working on prototype (not as crucial).
 
 # 09/10/2025
 
