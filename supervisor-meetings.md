@@ -1,3 +1,22 @@
+# 6/11/2025
+
+Agenda:
+- Previous Action Items -
+ 	- Prototype:
+  		- Working on integrating CRD Controller logic and integrating these with scheduler 
+  	- Document:
+  		- Base for Introduction, System Archetecture, CRDs, Controllers and Scheduler and Kepler laid out
+  	 	- Sections need to be finalised and further tested in prototype to see feasability
+
+Notes:
+
+-
+
+Action Items:
+
+-
+
+
 # 15/10/2025
 
 Agenda:
