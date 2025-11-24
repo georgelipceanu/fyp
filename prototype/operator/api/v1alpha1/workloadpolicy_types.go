@@ -1,59 +1,72 @@
-/*
-Copyright 2025 George Lipceanu.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
-
 package v1alpha1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
-// WorkloadPolicySpec defines the desired state of WorkloadPolicy
-type WorkloadPolicySpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-	// The following markers will use OpenAPI v3 schema to validate the value
-	// More info: https://book.kubebuilder.io/reference/markers/crd-validation.html
-
-	// foo is an example field of WorkloadPolicy. Edit workloadpolicy_types.go to remove/update
+// WorkloadTarget selects the workloads a policy applies to.
+type WorkloadTarget struct {
+	// NamespaceSelector optionally restricts to namespaces with these labels.
+	// If empty, all namespaces are considered.
 	// +optional
-	Foo *string `json:"foo,omitempty"`
+	NamespaceSelector *metav1.LabelSelector `json:"namespaceSelector,omitempty"`
+
+	// MatchLabels selects workloads by labels.
+	// This maps directly to Pod.metadata.labels for matching.
+	// +optional
+	MatchLabels map[string]string `json:"matchLabels,omitempty"`
 }
 
-// WorkloadPolicyStatus defines the observed state of WorkloadPolicy.
+// SchedulerHints contains per-workload preferences for the scheduler plugin.
+type SchedulerHints struct {
+	// UtilisationWeight is an integer 0–100.
+	// +kubebuilder:validation:Minimum=0
+	// +kubebuilder:validation:Maximum=100
+	UtilisationWeight *int32 `json:"utilisationWeight,omitempty"`
+
+	// CarbonWeight is an integer 0–100.
+	// +kubebuilder:validation:Minimum=0
+	// +kubebuilder:validation:Maximum=100
+	CarbonWeight *int32 `json:"carbonWeight,omitempty"`
+
+	// PreferBinPack indicates if the scheduler should favour filling nodes (bin-packing).
+	// +optional
+	PreferBinPack *bool `json:"preferBinPack,omitempty"`
+}
+
+// WorkloadPolicySpec describes the sustainability preferences for a set of workloads.
+// In the diagram: "WorkloadPolicy • maxCarbonIntensity • schedulerHints".
+type WorkloadPolicySpec struct {
+	// Target defines which workloads are governed by this policy.
+	Target WorkloadTarget `json:"target"`
+
+	// MaxCarbonIntensity is an optional upper bound (gCO2/kWh) for eligible nodes.
+	// +kubebuilder:validation:Minimum=0
+	// +optional
+	MaxCarbonIntensity *int32 `json:"maxCarbonIntensity,omitempty"`
+
+	// SchedulerHints define how the CarbonBinPack plugin should weigh utilisation vs carbon.
+	// +optional
+	SchedulerHints *SchedulerHints `json:"schedulerHints,omitempty"`
+
+	// Enforcement controls whether the policy is a soft preference or a hard requirement.
+	// Allowed values: "soft", "hard".
+	// +kubebuilder:validation:Enum=soft;hard
+	// +kubebuilder:default=soft
+	Enforcement string `json:"enforcement,omitempty"`
+}
+
+// WorkloadPolicyStatus reports how effectively the policy is applied.
 type WorkloadPolicyStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	// Enforced indicates whether hints/constraints have been applied successfully.
+	// +optional
+	Enforced bool `json:"enforced,omitempty"`
 
-	// For Kubernetes API conventions, see:
-	// https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties
+	// MatchedWorkloads is the number of workloads currently targeted by this policy.
+	// +optional
+	MatchedWorkloads int32 `json:"matchedWorkloads,omitempty"`
 
-	// conditions represent the current state of the WorkloadPolicy resource.
-	// Each condition has a unique type and reflects the status of a specific aspect of the resource.
-	//
-	// Standard condition types include:
-	// - "Available": the resource is fully functional
-	// - "Progressing": the resource is being created or updated
-	// - "Degraded": the resource failed to reach or maintain its desired state
-	//
-	// The status of each condition is one of True, False, or Unknown.
-	// +listType=map
-	// +listMapKey=type
+	// Conditions captures reconciliation state, e.g. "Ready", "PartiallyEnforced".
 	// +optional
 	Conditions []metav1.Condition `json:"conditions,omitempty"`
 }
@@ -61,32 +74,20 @@ type WorkloadPolicyStatus struct {
 // +kubebuilder:object:root=true
 // +kubebuilder:subresource:status
 
-// WorkloadPolicy is the Schema for the workloadpolicies API
+// WorkloadPolicy declares carbon-aware scheduling preferences for a set of workloads.
 type WorkloadPolicy struct {
-	metav1.TypeMeta `json:",inline"`
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	// metadata is a standard object metadata
-	// +optional
-	metav1.ObjectMeta `json:"metadata,omitempty,omitzero"`
-
-	// spec defines the desired state of WorkloadPolicy
-	// +required
-	Spec WorkloadPolicySpec `json:"spec"`
-
-	// status defines the observed state of WorkloadPolicy
-	// +optional
-	Status WorkloadPolicyStatus `json:"status,omitempty,omitzero"`
+	Spec   WorkloadPolicySpec   `json:"spec,omitempty"`
+	Status WorkloadPolicyStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// WorkloadPolicyList contains a list of WorkloadPolicy
+// WorkloadPolicyList contains a list of WorkloadPolicy.
 type WorkloadPolicyList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
 	Items           []WorkloadPolicy `json:"items"`
-}
-
-func init() {
-	SchemeBuilder.Register(&WorkloadPolicy{}, &WorkloadPolicyList{})
 }
