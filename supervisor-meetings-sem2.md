@@ -1,3 +1,28 @@
+# 29/01/2026
+
+Agenda:
+
+- Action Items from Last week:
+  - Demo step through done for 12/02/2025
+  - Issues with Jira:
+    - Errors loading views
+    - New UI
+
+Notes:
+
+- Step through demo for week 4 12/02/2025 half 4 (provisional)
+  - Scheduler workflow
+  - Controller logs/environment interaction
+- Updating CRDs at the moment to be in line with current report
+- Could switch to Trello if Jira is still acting up
+
+
+Action Items:
+
+- DEMO FOR WEEK 4 12/02/2025 half 4 (provisional)
+- Share Jira or Trello
+
+
 # 21/01/2026
 
 Agenda:
