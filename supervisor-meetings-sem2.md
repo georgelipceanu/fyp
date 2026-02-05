@@ -1,3 +1,24 @@
+# 05/02/2026
+
+Agenda:
+
+- Action Items from Last week:
+  - Demo step through done for 12/02/2025
+  - Issues with Jira, now switching to Trello
+- CRDs updated and controllers mostly complete with minimal function, now rewriting scheduler scoring plugin to account for new changes
+
+Notes:
+
+- Demo at 4:30 12/02/2025
+- Showcase submissions after reading week
+
+
+Action Items:
+
+- Pre-Write agenda for demo
+- DEMO FOR WEEK 4 12/02/2025 half 4 (provisional)
+- Richard to check recorded demo duration/details for project submission
+
 # 29/01/2026
 
 Agenda:
