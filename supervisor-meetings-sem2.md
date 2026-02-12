@@ -1,3 +1,27 @@
+# 12/02/2026
+
+Agenda:
+
+- Initialising the cluster with Kepler and Prometheus to take in and store node energy data
+- Briefly stepping through CRDs  
+- Running the operator (with the 3/5 controllers running, WorkloadPolicyController, KeplerMetricsSyncController and ReschedulingController) and running the scheduler
+- Providing demo scenario where Node A is more efficient to schedule to than Node B, and applying a WorkloadPolicy to this for the scheduler to use when scheduling the demo workload
+- Potentially rescheduling too (which I had working but broke when I had to go back to change some other workload policy logic), where Node B becomes more efficient to use over Node A and the rescheduling policy in the workload policy allows for the "reschedule" (pod eviction) to take place
+
+Notes:
+
+- Didn't work, need to find why
+- Need greater visualisation to show the intricacies of what is being done
+- Need to think of where to go next once fixed
+- AI tools that can make visualisation easy? graphical or animated scenario of the total flow involved in scheduler
+
+Action Items:
+
+- Fix the workloadpolicycontroller issue
+- Investigate tools to make visualisation more apparent and show to anyone how the scheduler/operator works itself
+- Run a schedule for the week
+
+
 # 05/02/2026
 
 Agenda:
