@@ -1,3 +1,34 @@
+# 19/03/2026
+
+Agenda:
+
+- Haven't had much time to work this week because of other modules
+  - Currently working on:
+    - Finishing off operator (CarbonInfo and EmissionReport)
+    - Finishing off tests
+  - AS FAR AS OVERALL PROJECT, Still need to work on
+    - CLI interface
+    - Visuals for whole project in motion
+- Showcase SUBMISSION FOR 25th MARCH 2PM
+  - Only Submission box for poster
+  - Poster will most likely contain same summary as the submission
+- SUNLIFE Awards due 10th April:
+  - 3 Categories - Innovation, Enterprise, Intellectual Curiosity
+   
+Notes:
+
+- Time better spent on Presentations/tidying up/Visuals rather than porting to cloud providers
+- Logged into comp expo, poster due 25th March
+- Sunlife awards - Probably intellectual curiosity
+
+Action Items:
+
+- GET POSTER SENT BEFORE SUBMISSION Monday
+- Filling out rest of showcase submission
+- Finish off current work
+- Revise work schedule for next Thursday review
+
+
 # 12/02/2026
 
 Agenda:
