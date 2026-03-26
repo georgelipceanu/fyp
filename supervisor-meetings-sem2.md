@@ -1,3 +1,38 @@
+# 26/03/2026
+
+Agenda:
+
+- Last weeks work:
+  - Finished off EmissionReport and CarbonInfo Controllers, seems to be all working (seems to be working)
+  - Tests still need to be finished
+  - Showcase submission submitted
+- Schedule from now until next meeting
+  - Finish off work on tests (End of this week)
+  - Visualisation tools and CLI Tooling (week 1 and start of week 2)
+  - Report work and SYSTEM DIAGRAMS(rest of week 2 and week 3)
+- Demo for sometime after Easter
+  - Installation via CLI
+  - Scheduling and WorkloadPolicy application similar to previous demo
+  - Rescheduling taking place
+  - EmissionReports working
+  - Visualisation tools to accompany this demo (as opposed to looking through logs)
+- Visualisation tools that I have looked at for seeing the work in action:
+  - Grafana dashboards showing Node efficiency and scheduler calculations
+  - `kube-ops-view` which could be useful for showing scheduling and more specifically rescheduling graphically as a pod moves from one node to another(example found in this video https://www.youtube.com/watch?v=auVLHYSZM_A)
+  - OpenLens to show Events in the cluster and pod specific information (https://www.youtube.com/watch?v=dKOdT91USwM)
+- Sunlife Awards - Want to stick with Intellectual Curiosity
+
+Notes:
+
+- 15th of April 4:15 for Demo 
+- kube-ops-view and OpenLens sound good, diagrams for these too
+
+Action Items:
+
+- Work through Easter break
+- Demo for 15th of April 4:15
+
+
 # 19/03/2026
 
 Agenda:
