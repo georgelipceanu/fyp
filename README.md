@@ -1,7 +1,4 @@
 # George Lipceanu FYP 
-## SusK8s: Sustainable Kubernetes Extension Stack
-
-> Elevating energy and carbon emissions to first-class operational signals in Kubernetes.
 
 [![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)](https://go.dev/)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-1.30+-326CE5?style=flat&logo=kubernetes)](https://kubernetes.io/)
@@ -12,7 +9,7 @@
 
 ## About the Project
 
-Kubernetes natively lacks mechanisms to manage the carbon impact of growing cloud workloads. SUSk8s addresses this by turning energy into a configurable signal which can be installed in Kubernetes clusters. It uses Custom Resource Definitions for declarative policy
+Kubernetes natively lacks mechanisms to manage the carbon impact of growing cloud workloads. SUSk8s, the sustainable Kubernetes extension stack addresses this by turning energy into a configurable signal which can be installed in Kubernetes clusters. It uses Custom Resource Definitions for declarative policy
 enforcement and a custom operator to manage these, with Kepler, Prometheus and Grafana
 providing supporting telemetry. A custom scheduler runs alongside the default, prioritising
 low-carbon nodes via a custom scoring plugin, with the custom operator running a rescheduler
