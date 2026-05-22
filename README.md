@@ -44,6 +44,6 @@ controller continuously evicts non-compliant pods.
 * [Video Demo](https://youtu.be/iW1LNHVbpUc)
 * [Source Code](https://github.com/georgelipceanu/susk8s)
 * [Supervisor Meetings (Sem 1)](supervisor-meetings.md)
-* [Supervisor Meetings (Sem 1)](supervisor-meetings-sem2.md)
+* [Supervisor Meetings (Sem 2)](supervisor-meetings-sem2.md)
 
 ---
