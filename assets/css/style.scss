@@ -1,5 +1,4 @@
 ---
----
 
 $header-bg-color: #2b5c3a;  
 $header-bg-color-secondary: #7bc043;
@@ -12,7 +11,7 @@ $header-bg-color-secondary: #7bc043;
 }
 
 body {
-  background-color: #f1f8f3;
+  background-color: #43eb3d;
 }
 
 .main-content {
@@ -21,4 +20,8 @@ body {
   border-radius: 8px;
   padding: 2rem;
   margin-top: 2rem;
+}
+
+.project-name, .project-tagline {
+  display: none;
 }
