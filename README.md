@@ -37,7 +37,7 @@ controller continuously evicts non-compliant pods.
 ![Architecture Diagram](latex-documentation/new_sys_dia.png)
 
 ## Links to Project Resources
-* [Project Report](https://github.com/georgelipceanu/fyp/blob/main/fyp2-document)
+* [Project Report](https://github.com/georgelipceanu/fyp/blob/main/fyp2_document.pdf)
 * [Video Demo](https://youtu.be/iW1LNHVbpUc)
 * [Source Code](https://github.com/georgelipceanu/susk8s)
 * [Supervisor Meetings (Sem 1)](supervisor-meetings.md)
